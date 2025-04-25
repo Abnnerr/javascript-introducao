@@ -213,16 +213,22 @@ else if(mes == '' && dia == '') {
 else if(mes == '' || dia == '') {
     alert('erro, campo com valor vazio')
 }
-else if(Number(mes) < 1 || Number(mes) > 12) {
+else if(!mesNum && !diaNum) {
+    alert('erro, mes e dia n é um numero')
+}
+else if(!mesNum || !diaNum) {
+    alert('erro, mes ou dia n é um numero')
+}
+else if(mesNum < 1 || mesNum > 12) {
     alert('erro, mes menor que 1 ou maior que 12')
 }
-else if(Number(dia) < 1 || Number(dia) > 31) {
+else if(diaNum < 1 || diaNum > 31) {
     alert('erro, dia menor que 1 ou maior que 31')
 }
-else if(Number(mes) > 12 && Number(dia) > 31) {
+else if(mesNum > 12 && diaNum > 31) {
     alert('erro maior mes ou dia maior q 12 meses ou 31 dias')
 }
-else if(Number(mes) > 12 || Number(dia) > 31) {
+else if(mesNum > 12 || diaNum > 31) {
     alert('erro  mes ou dia maior q 12 meses ou 31 dias')
 }
 else {
